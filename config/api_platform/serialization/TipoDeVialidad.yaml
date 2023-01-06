@@ -1,0 +1,4 @@
+App\Entity\TipoDeVialidad:
+  attributes:
+    Nombre:
+      groups: [ TipoDeVialidad_read, TipoDeVialidad_create, TipoDeVialidad_update ]

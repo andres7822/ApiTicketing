@@ -1,0 +1,16 @@
+App\Entity\ClientePersona:
+  attributes:
+    Cliente:
+      groups: [ ClientePersona_read, ClientePersona_create, ClientePersona_update ]
+    Persona:
+      groups: [ ClientePersona_read, ClientePersona_create, ClientePersona_update ]
+    Relacion:
+      groups: [ ClientePersona_read, ClientePersona_create, ClientePersona_update ]
+    Titulo:
+      groups: [ ClientePersona_read, ClientePersona_create, ClientePersona_update ]
+    Telefono:
+      groups: [ ClientePersona_read, ClientePersona_create, ClientePersona_update ]
+    Telefono2:
+      groups: [ ClientePersona_read, ClientePersona_create, ClientePersona_update ]
+    CorreoElectronico:
+      groups: [ ClientePersona_read, ClientePersona_create, ClientePersona_update ]

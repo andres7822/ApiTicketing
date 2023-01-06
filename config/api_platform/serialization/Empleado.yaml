@@ -1,0 +1,6 @@
+App\Entity\Empleado:
+  attributes:
+    Clave:
+      groups: [ Empleado_read, Empleado_create, Empleado_update ]
+    Persona:
+      groups: [ Empleado_read, Empleado_create, Empleado_update ]

@@ -1,0 +1,6 @@
+App\Entity\StatusCondicionComercial:
+  attributes:
+    Nombre:
+      groups: [ StatusCondicionComercial_read, StatusCondicionComercial_create, StatusCondicionComercial_update ]
+    Descripcion:
+      groups: [ StatusCondicionComercial_read, StatusCondicionComercial_create, StatusCondicionComercial_update ]

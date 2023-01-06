@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping">
+    <entity name="App\Entity\Ticket" table="Ticket">
+        <id name="id">
+            <generator strategy="IDENTITY"/>
+        </id>
+        <field name="Folio" length="16" column="`Folio`"/>
+        <field name="FechaYHora" type="datetime" column="`FechaYHora`"/>
+        <field name="Tema" length="64" nullable="true" column="`Tema`"/>
+        <field name="Descripcion" column="`Descripcion`"/>
+        <field name="Solicitante" type="integer" column="`Solicitante`"/>
+        <field name="Sucursal" type="integer" column="`Sucursal`"/>
+        <field name="Area" type="integer" column="`Area`"/>
+        <field name="FechaCompromiso" type="datetime" nullable="true" column="`FechaCompromiso`"/>
+        <field name="Observaciones" nullable="true" column="`Observaciones`"/>
+        <field name="Status" type="integer" column="`Status`"/>
+        <field name="Tipo" type="integer" column="`Tipo`"/>
+        <field name="Involucrados" type="integer" column="`Involucrados`"/>
+    </entity>
+</doctrine-mapping>

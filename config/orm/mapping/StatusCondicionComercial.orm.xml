@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping">
+    <entity name="App\Entity\StatusCondicionComercial" table="StatusCondicionComercial">
+        <id name="id">
+            <generator strategy="IDENTITY"/>
+        </id>
+        <field name="Nombre" length="32" column="`Nombre`"/>
+        <field name="Descripcion" type="text" nullable="true" column="`Descripcion`"/>
+    </entity>
+</doctrine-mapping>

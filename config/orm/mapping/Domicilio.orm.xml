@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping">
+    <entity name="App\Entity\Domicilio" table="Domicilio">
+        <id name="id">
+            <generator strategy="IDENTITY"/>
+        </id>
+        <field name="TipoDeVialidad" type="integer" nullable="true" column="`TipoDeVialidad`"/>
+        <field name="Vialidad" length="256" nullable="true" column="`Vialidad`"/>
+        <field name="TipoDeAsentamiento" type="integer" nullable="true" column="`TipoDeAsentamiento`"/>
+        <field name="Asentamiento" length="256" nullable="true" column="`Asentamiento`"/>
+        <field name="NumeroExterior" length="8" nullable="true" column="`NumeroExterior`"/>
+        <field name="NumeroInterior" length="8" nullable="true" column="`NumeroInterior`"/>
+        <field name="Pais" length="256" nullable="true" column="`Pais`"/>
+        <field name="EntidadFederativa" length="256" nullable="true" column="`EntidadFederativa`"/>
+        <field name="Municipio" length="256" nullable="true" column="`Municipio`"/>
+        <field name="Localidad" length="256" nullable="true" column="`Localidad`"/>
+        <field name="CodigoPostal" length="8" nullable="true" column="`CodigoPostal`"/>
+        <field name="Latitud" length="256" nullable="true" column="`Latitud`"/>
+        <field name="Longitud" length="256" nullable="true" column="`Longitud`"/>
+        <field name="GooglePin" type="text" nullable="true" column="`GooglePin`"/>
+        <field name="Visible" type="integer" column="`Visible`"/>
+        <field name="Actual" type="integer" column="`Actual`"/>
+        <field name="FechaTupla" type="datetime" column="`FechaTupla`"/>
+        <field name="Origen" length="128" column="`Origen`"/>
+        <field name="Tupla" length="128" column="`Tupla`"/>
+    </entity>
+</doctrine-mapping>

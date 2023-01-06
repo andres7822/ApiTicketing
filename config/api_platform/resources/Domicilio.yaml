@@ -1,0 +1,137 @@
+App\Entity\Domicilio:
+  attributes:
+    normalization_context:
+      groups: [ Domicilio_read ]
+  collectionOperations:
+    post:
+      method: POST
+      path: /Domicilio
+      controller: App\Api\Action\Domicilio\Register
+      denormalization_context:
+        groups: [ Domicilio_create ]
+      openapi_context:
+        summary: Nuevo registro
+    datatable:
+      method: POST
+      path: /Domicilio/{serveFunction}
+      controller: App\Api\Action\Domicilio\Table
+      deserialize: false
+      openapi_context:
+        summary: Datatable
+        requestBody:
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  dataTablesParameters:
+                    type: object
+                    properties:
+                      columns:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            data:
+                              type: integer
+                            name:
+                              type: string
+                            searchable:
+                              type: boolean
+                            orderable:
+                              type: boolean
+                            search:
+                              type: object
+                              properties:
+                                value:
+                                  type: string
+                                regex:
+                                  type: boolean
+                      draw:
+                        type: integer
+                      length:
+                        type: integer
+                      order:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            column:
+                              type: integer
+                            dir:
+                              type: string
+                      search:
+                        type: object
+                        properties:
+                          value:
+                            type: string
+                          regex:
+                            type: boolean
+                      start:
+                        type: integer
+                  params:
+                    type: object
+        responses:
+          200:
+            description: OK
+            content:
+              application/json:
+                schema:
+                  type: object
+                  properties:
+                    draw:
+                      type: integer
+                    recordsFiltered:
+                      type: integer
+                    recordsTotal:
+                      type: integer
+                    data:
+                      type: array
+                      items:
+                        type: object
+    combo:
+      method: GET
+      path: /Domicilio/combo/{inText?false}
+      controller: App\Api\Action\Domicilio\Combo
+      deserialize: false
+      openapi_context:
+        summary: Data to combo/select
+        responses:
+          200:
+            description: OK
+            content:
+              application/json:
+                schema:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      0:
+                        oneOf:
+                          - type: integer
+                          - type: string
+                      1:
+                        type: string
+  itemOperations:
+    get:
+      method: GET
+      path: /Domicilio/{id}
+      controller: App\Api\Action\Domicilio\Data
+      denormalization_context:
+        groups: [ Domicilio_read ]
+      openapi_context:
+        summary: Obtiene la informacion del registro
+    put:
+      method: PUT
+      path: /Domicilio/{id}
+      controller: App\Api\Action\Domicilio\Update
+      denormalization_context:
+        groups: [ Domicilio_update ]
+      openapi_context:
+        summary: Actualiza el registro
+    delete:
+      path: /Domicilio/{id}
+      controller: App\Api\Action\Domicilio\Delete
+      method: DELETE
+      openapi_context:
+        summary: Elimina el registro

@@ -1,0 +1,16 @@
+App\Entity\ClienteCondicionComercial:
+  attributes:
+    Cliente:
+      groups: [ ClienteCondicionComercial_read, ClienteCondicionComercial_create, ClienteCondicionComercial_update ]
+    CatalogoCondicionesComerciales:
+      groups: [ ClienteCondicionComercial_read, ClienteCondicionComercial_create, ClienteCondicionComercial_update ]
+    Descripcion:
+      groups: [ ClienteCondicionComercial_read, ClienteCondicionComercial_create, ClienteCondicionComercial_update ]
+    FechaAceptaci_on:
+      groups: [ ClienteCondicionComercial_read, ClienteCondicionComercial_create, ClienteCondicionComercial_update ]
+    Status:
+      groups: [ ClienteCondicionComercial_read, ClienteCondicionComercial_create, ClienteCondicionComercial_update ]
+    UsuarioRegistro:
+      groups: [ ClienteCondicionComercial_read, ClienteCondicionComercial_create, ClienteCondicionComercial_update ]
+    FechaTupla:
+      groups: [ ClienteCondicionComercial_read, ClienteCondicionComercial_create, ClienteCondicionComercial_update ]

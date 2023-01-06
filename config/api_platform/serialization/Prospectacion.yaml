@@ -1,0 +1,18 @@
+App\Entity\Prospectacion:
+  attributes:
+    Cliente:
+      groups: [ Prospectacion_read, Prospectacion_create, Prospectacion_update ]
+    FechaYHora:
+      groups: [ Prospectacion_read, Prospectacion_create, Prospectacion_update ]
+    TipoDeServicio:
+      groups: [ Prospectacion_read, Prospectacion_create, Prospectacion_update ]
+    DescripcionDelServicio:
+      groups: [ Prospectacion_read, Prospectacion_create, Prospectacion_update ]
+    Usuario:
+      groups: [ Prospectacion_read, Prospectacion_create, Prospectacion_update ]
+    Empleado:
+      groups: [ Prospectacion_read, Prospectacion_create, Prospectacion_update ]
+    Status:
+      groups: [ Prospectacion_read, Prospectacion_create, Prospectacion_update ]
+    Canalizado:
+      groups: [ Prospectacion_read, Prospectacion_create, Prospectacion_update ]

@@ -1,0 +1,12 @@
+App\Entity\CatalogoDeRequerimientos:
+  attributes:
+    TipoDeServicio:
+      groups: [ CatalogoDeRequerimientos_read, CatalogoDeRequerimientos_create, CatalogoDeRequerimientos_update ]
+    Requerimiento:
+      groups: [ CatalogoDeRequerimientos_read, CatalogoDeRequerimientos_create, CatalogoDeRequerimientos_update ]
+    Orden:
+      groups: [ CatalogoDeRequerimientos_read, CatalogoDeRequerimientos_create, CatalogoDeRequerimientos_update ]
+    Requerido:
+      groups: [ CatalogoDeRequerimientos_read, CatalogoDeRequerimientos_create, CatalogoDeRequerimientos_update ]
+    Catalogo:
+      groups: [ CatalogoDeRequerimientos_read, CatalogoDeRequerimientos_create, CatalogoDeRequerimientos_update ]

@@ -1,0 +1,16 @@
+App\Entity\DatosFiscales:
+  attributes:
+    NombreORazonSocial:
+      groups: [ DatosFiscales_read, DatosFiscales_create, DatosFiscales_update ]
+    RFC:
+      groups: [ DatosFiscales_read, DatosFiscales_create, DatosFiscales_update ]
+    RegimenFiscal:
+      groups: [ DatosFiscales_read, DatosFiscales_create, DatosFiscales_update ]
+    Domicilio:
+      groups: [ DatosFiscales_read, DatosFiscales_create, DatosFiscales_update ]
+    FechaTupla:
+      groups: [ DatosFiscales_read, DatosFiscales_create, DatosFiscales_update ]
+    Origen:
+      groups: [ DatosFiscales_read, DatosFiscales_create, DatosFiscales_update ]
+    Tupla:
+      groups: [ DatosFiscales_read, DatosFiscales_create, DatosFiscales_update ]

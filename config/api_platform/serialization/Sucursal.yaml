@@ -1,0 +1,4 @@
+App\Entity\Sucursal:
+  attributes:
+    Descripcion:
+      groups: [ Sucursal_read, Sucursal_create, Sucursal_update ]

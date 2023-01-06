@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping">
+    <entity name="App\Entity\Involucrados" table="Involucrados">
+        <id name="id">
+            <generator strategy="IDENTITY"/>
+        </id>
+        <field name="NivelDeParticipacion" type="integer" column="`NivelDeParticipacion`"/>
+        <field name="Ticket" type="integer" column="`Ticket`"/>
+        <field name="Participante" type="integer" column="`Participante`"/>
+        <field name="Participacion" type="integer" column="`Participacion`"/>
+    </entity>
+</doctrine-mapping>

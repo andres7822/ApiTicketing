@@ -1,0 +1,137 @@
+App\Entity\MedioDeSeguimiento:
+  attributes:
+    normalization_context:
+      groups: [ MedioDeSeguimiento_read ]
+  collectionOperations:
+    post:
+      method: POST
+      path: /MedioDeSeguimiento
+      controller: App\Api\Action\MedioDeSeguimiento\Register
+      denormalization_context:
+        groups: [ MedioDeSeguimiento_create ]
+      openapi_context:
+        summary: Nuevo registro
+    datatable:
+      method: POST
+      path: /MedioDeSeguimiento/{serveFunction}
+      controller: App\Api\Action\MedioDeSeguimiento\Table
+      deserialize: false
+      openapi_context:
+        summary: Datatable
+        requestBody:
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  dataTablesParameters:
+                    type: object
+                    properties:
+                      columns:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            data:
+                              type: integer
+                            name:
+                              type: string
+                            searchable:
+                              type: boolean
+                            orderable:
+                              type: boolean
+                            search:
+                              type: object
+                              properties:
+                                value:
+                                  type: string
+                                regex:
+                                  type: boolean
+                      draw:
+                        type: integer
+                      length:
+                        type: integer
+                      order:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            column:
+                              type: integer
+                            dir:
+                              type: string
+                      search:
+                        type: object
+                        properties:
+                          value:
+                            type: string
+                          regex:
+                            type: boolean
+                      start:
+                        type: integer
+                  params:
+                    type: object
+        responses:
+          200:
+            description: OK
+            content:
+              application/json:
+                schema:
+                  type: object
+                  properties:
+                    draw:
+                      type: integer
+                    recordsFiltered:
+                      type: integer
+                    recordsTotal:
+                      type: integer
+                    data:
+                      type: array
+                      items:
+                        type: object
+    combo:
+      method: GET
+      path: /MedioDeSeguimiento/combo/{inText?false}
+      controller: App\Api\Action\MedioDeSeguimiento\Combo
+      deserialize: false
+      openapi_context:
+        summary: Data to combo/select
+        responses:
+          200:
+            description: OK
+            content:
+              application/json:
+                schema:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      0:
+                        oneOf:
+                          - type: integer
+                          - type: string
+                      1:
+                        type: string
+  itemOperations:
+    get:
+      method: GET
+      path: /MedioDeSeguimiento/{id}
+      controller: App\Api\Action\MedioDeSeguimiento\Data
+      denormalization_context:
+        groups: [ MedioDeSeguimiento_read ]
+      openapi_context:
+        summary: Obtiene la informacion del registro
+    put:
+      method: PUT
+      path: /MedioDeSeguimiento/{id}
+      controller: App\Api\Action\MedioDeSeguimiento\Update
+      denormalization_context:
+        groups: [ MedioDeSeguimiento_update ]
+      openapi_context:
+        summary: Actualiza el registro
+    delete:
+      path: /MedioDeSeguimiento/{id}
+      controller: App\Api\Action\MedioDeSeguimiento\Delete
+      method: DELETE
+      openapi_context:
+        summary: Elimina el registro

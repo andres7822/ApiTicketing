@@ -1,0 +1,16 @@
+App\Entity\Seguimiento:
+  attributes:
+    FechaYHora:
+      groups: [ Seguimiento_read, Seguimiento_create, Seguimiento_update ]
+    Descripcion:
+      groups: [ Seguimiento_read, Seguimiento_create, Seguimiento_update ]
+    Conclusiones:
+      groups: [ Seguimiento_read, Seguimiento_create, Seguimiento_update ]
+    Status:
+      groups: [ Seguimiento_read, Seguimiento_create, Seguimiento_update ]
+    Empleado:
+      groups: [ Seguimiento_read, Seguimiento_create, Seguimiento_update ]
+    Medio:
+      groups: [ Seguimiento_read, Seguimiento_create, Seguimiento_update ]
+    Prospectacion:
+      groups: [ Seguimiento_read, Seguimiento_create, Seguimiento_update ]

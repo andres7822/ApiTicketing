@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping">
+    <entity name="App\Entity\DocumentoCliente" table="DocumentoCliente">
+        <id name="id">
+            <generator strategy="IDENTITY"/>
+        </id>
+        <field name="Cliente" type="integer" column="`Cliente`"/>
+        <field name="Documento" type="integer" column="`Documento`"/>
+        <field name="Archivo" type="integer" nullable="true" column="`Archivo`"/>
+        <field name="Comentarios" type="text" nullable="true" column="`Comentarios`"/>
+    </entity>
+</doctrine-mapping>

@@ -1,0 +1,10 @@
+App\Entity\Involucrados:
+  attributes:
+    NivelDeParticipacion:
+      groups: [ Involucrados_read, Involucrados_create, Involucrados_update ]
+    Ticket:
+      groups: [ Involucrados_read, Involucrados_create, Involucrados_update ]
+    Participante:
+      groups: [ Involucrados_read, Involucrados_create, Involucrados_update ]
+    Participacion:
+      groups: [ Involucrados_read, Involucrados_create, Involucrados_update ]

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping">
+    <entity name="App\Entity\Cliente" table="Cliente">
+        <id name="id">
+            <generator strategy="IDENTITY"/>
+        </id>
+        <field name="Nombre" length="256" column="`Nombre`"/>
+        <field name="NoCliente" length="16" column="`NoCliente`"/>
+        <field name="Empresa" type="integer" column="`Empresa`"/>
+        <field name="FechaTupla" type="datetime" column="`FechaTupla`"/>
+        <field name="UsuarioRegistro" type="integer" column="`UsuarioRegistro`"/>
+        <field name="Status" type="integer" column="`Status`"/>
+        <field name="PaginaWeb" type="integer" nullable="true" column="`PaginaWeb`"/>
+        <field name="LimiteDeCredito" type="integer" precision="18" scale="6" nullable="true" column="`LimiteDeCredito`"/>
+    </entity>
+</doctrine-mapping>

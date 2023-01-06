@@ -1,0 +1,136 @@
+App\Entity\Cliente:
+  attributes:
+    normalization_context:
+      groups: [ Cliente_read ]
+  collectionOperations:
+    post:
+      method: POST
+      path: /Cliente
+      controller: App\Api\Action\Cliente\Register
+      deserialize: false
+      openapi_context:
+        summary: Nuevo registro
+    datatable:
+      method: POST
+      path: /Cliente/{serveFunction}
+      controller: App\Api\Action\Cliente\Table
+      deserialize: false
+      openapi_context:
+        summary: Datatable
+        requestBody:
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  dataTablesParameters:
+                    type: object
+                    properties:
+                      columns:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            data:
+                              type: integer
+                            name:
+                              type: string
+                            searchable:
+                              type: boolean
+                            orderable:
+                              type: boolean
+                            search:
+                              type: object
+                              properties:
+                                value:
+                                  type: string
+                                regex:
+                                  type: boolean
+                      draw:
+                        type: integer
+                      length:
+                        type: integer
+                      order:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            column:
+                              type: integer
+                            dir:
+                              type: string
+                      search:
+                        type: object
+                        properties:
+                          value:
+                            type: string
+                          regex:
+                            type: boolean
+                      start:
+                        type: integer
+                  params:
+                    type: object
+        responses:
+          200:
+            description: OK
+            content:
+              application/json:
+                schema:
+                  type: object
+                  properties:
+                    draw:
+                      type: integer
+                    recordsFiltered:
+                      type: integer
+                    recordsTotal:
+                      type: integer
+                    data:
+                      type: array
+                      items:
+                        type: object
+    combo:
+      method: GET
+      path: /Cliente/combo/{inText?false}
+      controller: App\Api\Action\Cliente\Combo
+      deserialize: false
+      openapi_context:
+        summary: Data to combo/select
+        responses:
+          200:
+            description: OK
+            content:
+              application/json:
+                schema:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      0:
+                        oneOf:
+                          - type: integer
+                          - type: string
+                      1:
+                        type: string
+  itemOperations:
+    get:
+      method: GET
+      path: /Cliente/{id}
+      controller: App\Api\Action\Cliente\Data
+      denormalization_context:
+        groups: [ Cliente_read ]
+      openapi_context:
+        summary: Obtiene la informacion del registro
+    put:
+      method: PUT
+      path: /Cliente/{id}
+      controller: App\Api\Action\Cliente\Update
+      denormalization_context:
+        groups: [ Cliente_update ]
+      openapi_context:
+        summary: Actualiza el registro
+    delete:
+      path: /Cliente/{id}
+      controller: App\Api\Action\Cliente\Delete
+      method: DELETE
+      openapi_context:
+        summary: Elimina el registro

@@ -1,0 +1,12 @@
+App\Entity\Persona:
+  attributes:
+    NombreORazonSocial:
+      groups: [ Persona_read, Persona_create, Persona_update ]
+    Telefono:
+      groups: [ Persona_read, Persona_create, Persona_update ]
+    CorreoElectronico:
+      groups: [ Persona_read, Persona_create, Persona_update ]
+    TipoDePersona:
+      groups: [ Persona_read, Persona_create, Persona_update ]
+    DatosFiscales:
+      groups: [ Persona_read, Persona_create, Persona_update ]

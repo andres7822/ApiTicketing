@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping">
+    <entity name="App\Entity\Prospectacion" table="Prospectacion">
+        <id name="id">
+            <generator strategy="IDENTITY"/>
+        </id>
+        <field name="Cliente" type="integer" column="`Cliente`"/>
+        <field name="FechaYHora" type="datetime" column="`FechaYHora`"/>
+        <field name="TipoDeServicio" type="integer" column="`TipoDeServicio`"/>
+        <field name="DescripcionDelServicio" type="text" column="`DescripcionDelServicio`"/>
+        <field name="Usuario" type="integer" column="`Usuario`"/>
+        <field name="Empleado" type="integer" column="`Empleado`"/>
+        <field name="Status" type="integer" column="`Status`"/>
+        <field name="Canalizado" type="integer" column="`Canalizado`"/>
+    </entity>
+</doctrine-mapping>

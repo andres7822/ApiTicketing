@@ -1,0 +1,18 @@
+App\Entity\Cliente:
+  attributes:
+    Nombre:
+      groups: [ Cliente_read, Cliente_create, Cliente_update ]
+    NoCliente:
+      groups: [ Cliente_read, Cliente_create, Cliente_update ]
+    Empresa:
+      groups: [ Cliente_read, Cliente_create, Cliente_update ]
+    FechaTupla:
+      groups: [ Cliente_read, Cliente_create, Cliente_update ]
+    UsuarioRegistro:
+      groups: [ Cliente_read, Cliente_create, Cliente_update ]
+    Status:
+      groups: [ Cliente_read, Cliente_create, Cliente_update ]
+    PaginaWeb:
+      groups: [ Cliente_read, Cliente_create, Cliente_update ]
+    LimiteDeCredito:
+      groups: [ Cliente_read, Cliente_create, Cliente_update ]

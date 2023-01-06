@@ -1,0 +1,10 @@
+App\Entity\DocumentoCliente:
+  attributes:
+    Cliente:
+      groups: [ DocumentoCliente_read, DocumentoCliente_create, DocumentoCliente_update ]
+    Documento:
+      groups: [ DocumentoCliente_read, DocumentoCliente_create, DocumentoCliente_update ]
+    Archivo:
+      groups: [ DocumentoCliente_read, DocumentoCliente_create, DocumentoCliente_update ]
+    Comentarios:
+      groups: [ DocumentoCliente_read, DocumentoCliente_create, DocumentoCliente_update ]

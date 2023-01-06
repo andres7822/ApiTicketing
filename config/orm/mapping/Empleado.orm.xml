@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping">
+    <entity name="App\Entity\Empleado" table="Empleado">
+        <id name="id">
+            <generator strategy="IDENTITY"/>
+        </id>
+        <field name="Clave" length="16" column="`Clave`"/>
+        <field name="Persona" type="integer" column="`Persona`"/>
+    </entity>
+</doctrine-mapping>

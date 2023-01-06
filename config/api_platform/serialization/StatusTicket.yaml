@@ -1,0 +1,8 @@
+App\Entity\StatusTicket:
+  attributes:
+    Nombre:
+      groups: [ StatusTicket_read, StatusTicket_create, StatusTicket_update ]
+    Descripcion:
+      groups: [ StatusTicket_read, StatusTicket_create, StatusTicket_update ]
+    Acotacion:
+      groups: [ StatusTicket_read, StatusTicket_create, StatusTicket_update ]

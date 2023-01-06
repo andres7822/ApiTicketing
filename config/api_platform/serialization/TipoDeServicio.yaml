@@ -1,0 +1,8 @@
+App\Entity\TipoDeServicio:
+  attributes:
+    Nombre:
+      groups: [ TipoDeServicio_read, TipoDeServicio_create, TipoDeServicio_update ]
+    Descripcion:
+      groups: [ TipoDeServicio_read, TipoDeServicio_create, TipoDeServicio_update ]
+    Activo:
+      groups: [ TipoDeServicio_read, TipoDeServicio_create, TipoDeServicio_update ]

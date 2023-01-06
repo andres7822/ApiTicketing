@@ -1,0 +1,12 @@
+App\Entity\StatusProspectacion:
+  attributes:
+    Descipcion:
+      groups: [ StatusProspectacion_read, StatusProspectacion_create, StatusProspectacion_update ]
+    Acotacion:
+      groups: [ StatusProspectacion_read, StatusProspectacion_create, StatusProspectacion_update ]
+    Origen:
+      groups: [ StatusProspectacion_read, StatusProspectacion_create, StatusProspectacion_update ]
+    Nombre:
+      groups: [ StatusProspectacion_read, StatusProspectacion_create, StatusProspectacion_update ]
+    Descripcion:
+      groups: [ StatusProspectacion_read, StatusProspectacion_create, StatusProspectacion_update ]

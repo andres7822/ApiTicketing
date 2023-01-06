@@ -1,0 +1,4 @@
+App\Entity\TipoDeAsentamiento:
+  attributes:
+    Nombre:
+      groups: [ TipoDeAsentamiento_read, TipoDeAsentamiento_create, TipoDeAsentamiento_update ]

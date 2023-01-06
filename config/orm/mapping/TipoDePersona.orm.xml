@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping">
+    <entity name="App\Entity\TipoDePersona" table="TipoDePersona">
+        <id name="id">
+            <generator strategy="IDENTITY"/>
+        </id>
+        <field name="Descripcion" length="64" column="`Descripcion`"/>
+    </entity>
+</doctrine-mapping>

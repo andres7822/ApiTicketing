@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping">
+    <entity name="App\Entity\CatalogoDeDocumento" table="CatalogoDeDocumento">
+        <id name="id">
+            <generator strategy="IDENTITY"/>
+        </id>
+        <field name="Nombre" length="128" column="`Nombre`"/>
+        <field name="Descripcion" length="512" nullable="true" column="`Descripcion`"/>
+        <field name="Activo" type="integer" column="`Activo`"/>
+        <field name="Prioridad" type="integer" column="`Prioridad`"/>
+        <field name="Origen" length="128" column="`Origen`"/>
+        <field name="Requerido" type="integer" nullable="true" column="`Requerido`"/>
+    </entity>
+</doctrine-mapping>

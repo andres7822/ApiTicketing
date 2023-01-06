@@ -1,0 +1,4 @@
+App\Entity\TipoDeTicket:
+  attributes:
+    TipoDeTicket:
+      groups: [ TipoDeTicket_read, TipoDeTicket_create, TipoDeTicket_update ]

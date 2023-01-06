@@ -1,0 +1,4 @@
+App\Entity\Area:
+  attributes:
+    Descripcion:
+      groups: [ Area_read, Area_create, Area_update ]

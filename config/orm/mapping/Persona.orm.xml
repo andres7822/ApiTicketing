@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping">
+    <entity name="App\Entity\Persona" table="Persona">
+        <id name="id">
+            <generator strategy="IDENTITY"/>
+        </id>
+        <field name="NombreORazonSocial" length="256" column="`NombreORazonSocial`"/>
+        <field name="Telefono" length="32" column="`Telefono`"/>
+        <field name="CorreoElectronico" length="64" column="`CorreoElectronico`"/>
+        <field name="TipoDePersona" type="integer" column="`TipoDePersona`"/>
+        <field name="DatosFiscales" type="integer" nullable="true" column="`DatosFiscales`"/>
+    </entity>
+</doctrine-mapping>

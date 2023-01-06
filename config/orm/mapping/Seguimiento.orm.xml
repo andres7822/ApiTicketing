@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping">
+    <entity name="App\Entity\Seguimiento" table="Seguimiento">
+        <id name="id">
+            <generator strategy="IDENTITY"/>
+        </id>
+        <field name="FechaYHora" type="datetime" column="`FechaYHora`"/>
+        <field name="Descripcion" type="text" column="`Descripcion`"/>
+        <field name="Conclusiones" type="text" column="`Conclusiones`"/>
+        <field name="Status" type="integer" column="`Status`"/>
+        <field name="Empleado" type="integer" column="`Empleado`"/>
+        <field name="Medio" type="integer" column="`Medio`"/>
+        <field name="Prospectacion" type="integer" column="`Prospectacion`"/>
+    </entity>
+</doctrine-mapping>

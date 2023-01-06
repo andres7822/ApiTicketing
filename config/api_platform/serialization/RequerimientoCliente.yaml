@@ -1,0 +1,18 @@
+App\Entity\RequerimientoCliente:
+  attributes:
+    Cliente:
+      groups: [ RequerimientoCliente_read, RequerimientoCliente_create, RequerimientoCliente_update ]
+    Fecha:
+      groups: [ RequerimientoCliente_read, RequerimientoCliente_create, RequerimientoCliente_update ]
+    Status:
+      groups: [ RequerimientoCliente_read, RequerimientoCliente_create, RequerimientoCliente_update ]
+    Valor:
+      groups: [ RequerimientoCliente_read, RequerimientoCliente_create, RequerimientoCliente_update ]
+    Solicitante:
+      groups: [ RequerimientoCliente_read, RequerimientoCliente_create, RequerimientoCliente_update ]
+    Requerimiento:
+      groups: [ RequerimientoCliente_read, RequerimientoCliente_create, RequerimientoCliente_update ]
+    UsuarioRegistro:
+      groups: [ RequerimientoCliente_read, RequerimientoCliente_create, RequerimientoCliente_update ]
+    EmpleadoElaboro:
+      groups: [ RequerimientoCliente_read, RequerimientoCliente_create, RequerimientoCliente_update ]

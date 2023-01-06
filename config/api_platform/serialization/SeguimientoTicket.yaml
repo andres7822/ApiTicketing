@@ -1,0 +1,12 @@
+App\Entity\SeguimientoTicket:
+  attributes:
+    Ticket:
+      groups: [ SeguimientoTicket_read, SeguimientoTicket_create, SeguimientoTicket_update ]
+    FechaYHora:
+      groups: [ SeguimientoTicket_read, SeguimientoTicket_create, SeguimientoTicket_update ]
+    Usuario:
+      groups: [ SeguimientoTicket_read, SeguimientoTicket_create, SeguimientoTicket_update ]
+    Descripcion:
+      groups: [ SeguimientoTicket_read, SeguimientoTicket_create, SeguimientoTicket_update ]
+    Status:
+      groups: [ SeguimientoTicket_read, SeguimientoTicket_create, SeguimientoTicket_update ]

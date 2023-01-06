@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping">
+    <entity name="App\Entity\DatosFiscales" table="DatosFiscales">
+        <id name="id">
+            <generator strategy="IDENTITY"/>
+        </id>
+        <field name="NombreORazonSocial" length="256" column="`NombreORazonSocial`"/>
+        <field name="RFC" length="16" column="`RFC`"/>
+        <field name="RegimenFiscal" type="integer" column="`RegimenFiscal`"/>
+        <field name="Domicilio" type="integer" column="`Domicilio`"/>
+        <field name="FechaTupla" type="datetime" column="`FechaTupla`"/>
+        <field name="Origen" length="128" column="`Origen`"/>
+        <field name="Tupla" length="128" column="`Tupla`"/>
+    </entity>
+</doctrine-mapping>

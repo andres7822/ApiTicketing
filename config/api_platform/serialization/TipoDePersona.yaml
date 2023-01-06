@@ -1,0 +1,4 @@
+App\Entity\TipoDePersona:
+  attributes:
+    Descripcion:
+      groups: [ TipoDePersona_read, TipoDePersona_create, TipoDePersona_update ]

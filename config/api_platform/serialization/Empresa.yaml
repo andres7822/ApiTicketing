@@ -1,0 +1,6 @@
+App\Entity\Empresa:
+  attributes:
+    NombreComercial:
+      groups: [ Empresa_read, Empresa_create, Empresa_update ]
+    DatosFiscales:
+      groups: [ Empresa_read, Empresa_create, Empresa_update ]

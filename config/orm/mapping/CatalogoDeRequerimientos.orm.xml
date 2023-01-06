@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping">
+    <entity name="App\Entity\CatalogoDeRequerimientos" table="CatalogoDeRequerimientos">
+        <id name="id">
+            <generator strategy="IDENTITY"/>
+        </id>
+        <field name="TipoDeServicio" type="integer" column="`TipoDeServicio`"/>
+        <field name="Requerimiento" length="256" column="`Requerimiento`"/>
+        <field name="Orden" type="integer" column="`Orden`"/>
+        <field name="Requerido" type="integer" nullable="true" column="`Requerido`"/>
+        <field name="Catalogo" type="text" nullable="true" column="`Catalogo`"/>
+    </entity>
+</doctrine-mapping>

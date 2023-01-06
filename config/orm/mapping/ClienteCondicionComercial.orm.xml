@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping">
+    <entity name="App\Entity\ClienteCondicionComercial" table="ClienteCondicionComercial">
+        <id name="id">
+            <generator strategy="IDENTITY"/>
+        </id>
+        <field name="Cliente" type="integer" column="`Cliente`"/>
+        <field name="CatalogoCondicionesComerciales" type="integer" column="`CatalogoCondicionesComerciales`"/>
+        <field name="Descripcion" type="text" column="`Descripcion`"/>
+        <field name="FechaAceptaci_on" type="date" nullable="true" column="`FechaAceptaci_on`"/>
+        <field name="Status" type="integer" column="`Status`"/>
+        <field name="UsuarioRegistro" type="integer" column="`UsuarioRegistro`"/>
+        <field name="FechaTupla" type="datetime" column="`FechaTupla`"/>
+    </entity>
+</doctrine-mapping>

@@ -1,0 +1,14 @@
+App\Entity\CatalogoDeDocumento:
+  attributes:
+    Nombre:
+      groups: [ CatalogoDeDocumento_read, CatalogoDeDocumento_create, CatalogoDeDocumento_update ]
+    Descripcion:
+      groups: [ CatalogoDeDocumento_read, CatalogoDeDocumento_create, CatalogoDeDocumento_update ]
+    Activo:
+      groups: [ CatalogoDeDocumento_read, CatalogoDeDocumento_create, CatalogoDeDocumento_update ]
+    Prioridad:
+      groups: [ CatalogoDeDocumento_read, CatalogoDeDocumento_create, CatalogoDeDocumento_update ]
+    Origen:
+      groups: [ CatalogoDeDocumento_read, CatalogoDeDocumento_create, CatalogoDeDocumento_update ]
+    Requerido:
+      groups: [ CatalogoDeDocumento_read, CatalogoDeDocumento_create, CatalogoDeDocumento_update ]

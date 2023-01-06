@@ -1,0 +1,40 @@
+App\Entity\Domicilio:
+  attributes:
+    TipoDeVialidad:
+      groups: [ Domicilio_read, Domicilio_create, Domicilio_update ]
+    Vialidad:
+      groups: [ Domicilio_read, Domicilio_create, Domicilio_update ]
+    TipoDeAsentamiento:
+      groups: [ Domicilio_read, Domicilio_create, Domicilio_update ]
+    Asentamiento:
+      groups: [ Domicilio_read, Domicilio_create, Domicilio_update ]
+    NumeroExterior:
+      groups: [ Domicilio_read, Domicilio_create, Domicilio_update ]
+    NumeroInterior:
+      groups: [ Domicilio_read, Domicilio_create, Domicilio_update ]
+    Pais:
+      groups: [ Domicilio_read, Domicilio_create, Domicilio_update ]
+    EntidadFederativa:
+      groups: [ Domicilio_read, Domicilio_create, Domicilio_update ]
+    Municipio:
+      groups: [ Domicilio_read, Domicilio_create, Domicilio_update ]
+    Localidad:
+      groups: [ Domicilio_read, Domicilio_create, Domicilio_update ]
+    CodigoPostal:
+      groups: [ Domicilio_read, Domicilio_create, Domicilio_update ]
+    Latitud:
+      groups: [ Domicilio_read, Domicilio_create, Domicilio_update ]
+    Longitud:
+      groups: [ Domicilio_read, Domicilio_create, Domicilio_update ]
+    GooglePin:
+      groups: [ Domicilio_read, Domicilio_create, Domicilio_update ]
+    Visible:
+      groups: [ Domicilio_read, Domicilio_create, Domicilio_update ]
+    Actual:
+      groups: [ Domicilio_read, Domicilio_create, Domicilio_update ]
+    FechaTupla:
+      groups: [ Domicilio_read, Domicilio_create, Domicilio_update ]
+    Origen:
+      groups: [ Domicilio_read, Domicilio_create, Domicilio_update ]
+    Tupla:
+      groups: [ Domicilio_read, Domicilio_create, Domicilio_update ]

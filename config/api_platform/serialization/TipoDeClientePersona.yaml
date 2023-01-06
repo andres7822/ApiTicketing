@@ -1,0 +1,6 @@
+App\Entity\TipoDeClientePersona:
+  attributes:
+    Nombre:
+      groups: [ TipoDeClientePersona_read, TipoDeClientePersona_create, TipoDeClientePersona_update ]
+    Descripcion:
+      groups: [ TipoDeClientePersona_read, TipoDeClientePersona_create, TipoDeClientePersona_update ]

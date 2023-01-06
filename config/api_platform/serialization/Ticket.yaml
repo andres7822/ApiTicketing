@@ -1,0 +1,26 @@
+App\Entity\Ticket:
+  attributes:
+    Folio:
+      groups: [ Ticket_read, Ticket_create, Ticket_update ]
+    FechaYHora:
+      groups: [ Ticket_read, Ticket_create, Ticket_update ]
+    Tema:
+      groups: [ Ticket_read, Ticket_create, Ticket_update ]
+    Descripcion:
+      groups: [ Ticket_read, Ticket_create, Ticket_update ]
+    Solicitante:
+      groups: [ Ticket_read, Ticket_create, Ticket_update ]
+    Sucursal:
+      groups: [ Ticket_read, Ticket_create, Ticket_update ]
+    Area:
+      groups: [ Ticket_read, Ticket_create, Ticket_update ]
+    FechaCompromiso:
+      groups: [ Ticket_read, Ticket_create, Ticket_update ]
+    Observaciones:
+      groups: [ Ticket_read, Ticket_create, Ticket_update ]
+    Status:
+      groups: [ Ticket_read, Ticket_create, Ticket_update ]
+    Tipo:
+      groups: [ Ticket_read, Ticket_create, Ticket_update ]
+    Involucrados:
+        groups: [ Ticket_read, Ticket_create, Ticket_update ]:

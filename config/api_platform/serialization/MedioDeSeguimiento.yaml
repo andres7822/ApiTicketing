@@ -1,0 +1,6 @@
+App\Entity\MedioDeSeguimiento:
+  attributes:
+    Nombre:
+      groups: [ MedioDeSeguimiento_read, MedioDeSeguimiento_create, MedioDeSeguimiento_update ]
+    Descripcion:
+      groups: [ MedioDeSeguimiento_read, MedioDeSeguimiento_create, MedioDeSeguimiento_update ]

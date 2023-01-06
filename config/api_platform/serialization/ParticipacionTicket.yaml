@@ -1,0 +1,4 @@
+App\Entity\ParticipacionTicket:
+  attributes:
+    Descripcion:
+      groups: [ ParticipacionTicket_read, ParticipacionTicket_create, ParticipacionTicket_update ]

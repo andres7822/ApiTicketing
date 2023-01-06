@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping">
+    <entity name="App\Entity\RequerimientoCliente" table="RequerimientoCliente">
+        <id name="id">
+            <generator strategy="IDENTITY"/>
+        </id>
+        <field name="Cliente" type="integer" column="`Cliente`"/>
+        <field name="Fecha" type="datetime" column="`Fecha`"/>
+        <field name="Status" type="integer" nullable="true" column="`Status`"/>
+        <field name="Valor" type="text" column="`Valor`"/>
+        <field name="Solicitante" type="integer" column="`Solicitante`"/>
+        <field name="Requerimiento" type="integer" nullable="true" column="`Requerimiento`"/>
+        <field name="UsuarioRegistro" type="integer" column="`UsuarioRegistro`"/>
+        <field name="EmpleadoElaboro" type="integer" column="`EmpleadoElaboro`"/>
+    </entity>
+</doctrine-mapping>

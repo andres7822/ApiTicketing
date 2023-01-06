@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping">
+    <entity name="App\Entity\ClientePersona" table="ClientePersona">
+        <id name="id">
+            <generator strategy="IDENTITY"/>
+        </id>
+        <field name="Cliente" type="integer" column="`Cliente`"/>
+        <field name="Persona" type="integer" column="`Persona`"/>
+        <field name="Relacion" type="integer" column="`Relacion`"/>
+        <field name="Titulo" length="65" nullable="true" column="`Titulo`"/>
+        <field name="Telefono" length="16" nullable="true" column="`Telefono`"/>
+        <field name="Telefono2" length="16" nullable="true" column="`Telefono2`"/>
+        <field name="CorreoElectronico" length="64" nullable="true" column="`CorreoElectronico`"/>
+    </entity>
+</doctrine-mapping>

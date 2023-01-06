@@ -1,0 +1,67 @@
+<?php
+
+namespace App\Service\Ticket;
+
+use App\Entity\Ticket;
+use App\Repository\TicketRepository;
+use App\Service\systemLog\systemLogRegisterService;
+use Doctrine\ORM\OptimisticLockException;
+use Doctrine\ORM\ORMException;
+
+class TicketUpdateService
+{
+    private TicketRepository $repository;
+    private systemLogRegisterService $accesoService;
+
+    public function __construct(TicketRepository         $repository,
+                                systemLogRegisterService $accesoService)
+    {
+        $this->repository = $repository;
+        $this->accesoService = $accesoService;
+    }
+
+    /**
+     * @throws OptimisticLockException
+     * @throws ORMException
+     */
+    public function update(int $id, string $Folio, mixed $FechaYHora, ?string $Tema, string $Descripcion, int $Solicitante, int $Sucursal, ?int $Area, mixed $FechaCompromiso, ?string $Observaciones, int $Status, int $Tipo, ?int $Involucrados): Ticket
+    {
+        if (!($FechaYHora instanceof \DateTime)) {
+            $FechaYHora = new \DateTime($FechaYHora);
+        }
+        if (!($FechaCompromiso instanceof \DateTime) && strlen($FechaCompromiso)) {
+            $FechaCompromiso = new \DateTime($FechaCompromiso);
+        }
+
+        $Ticket = $this->repository->findById($id);
+        $Ticket->setFolio($Folio);
+        $Ticket->setFechaYHora($FechaYHora);
+        $Ticket->setTema($Tema);
+        $Ticket->setDescripcion($Descripcion);
+        $Ticket->setSolicitante($Solicitante);
+        $Ticket->setSucursal($Sucursal);
+        $Ticket->setArea($Area);
+        $Ticket->setFechaCompromiso($FechaCompromiso);
+        $Ticket->setObservaciones($Observaciones);
+        $Ticket->setStatus($Status);
+        $Ticket->setTipo($Tipo);
+        $Ticket->setInvolucrados($Involucrados);
+
+        $data = [
+            'Folio' => $Ticket->getFolio(),
+            'FechaYHora' => $Ticket->getFechaYHora(),
+            'Tema' => $Ticket->getTema(),
+            'Descripcion' => $Ticket->getDescripcion(),
+            'Solicitante' => $Ticket->getSolicitante(),
+            'Sucursal' => $Ticket->getSucursal(),
+            'Area' => $Ticket->getArea(),
+            'FechaCompromiso' => $Ticket->getFechaCompromiso(),
+            'Observaciones' => $Ticket->getObservaciones(),
+            'Status' => $Ticket->getStatus(),
+            'Involucrados' => $Ticket->getInvolucrados(),
+        ];
+        $this->accesoService->create('Ticket', $id, 5, $data);
+
+        return $Ticket;
+    }
+}

@@ -1,0 +1,8 @@
+App\Entity\CatalogoCondicionesComerciales:
+  attributes:
+    Nombre:
+      groups: [ CatalogoCondicionesComerciales_read, CatalogoCondicionesComerciales_create, CatalogoCondicionesComerciales_update ]
+    DescripcionCondicion:
+      groups: [ CatalogoCondicionesComerciales_read, CatalogoCondicionesComerciales_create, CatalogoCondicionesComerciales_update ]
+    Requerida:
+      groups: [ CatalogoCondicionesComerciales_read, CatalogoCondicionesComerciales_create, CatalogoCondicionesComerciales_update ]
