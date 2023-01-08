@@ -21,8 +21,9 @@
          * @throws ORMException
          */
         public function __invoke(int $id, Request $request): TipoDeTicket{
-            $TipoDeTicket = RequestService::getField($request, 'TipoDeTicket');
+            $TipoTicket = RequestService::getField($request, 'TipoTicket');
+            $DiasLimiteResolucion = RequestService::getField($request, 'DiasLimiteResolucion');
 
-            return $this->service->update($id, $TipoDeTicket);
+            return $this->service->update($id, $TipoTicket, $DiasLimiteResolucion);
         }
     }

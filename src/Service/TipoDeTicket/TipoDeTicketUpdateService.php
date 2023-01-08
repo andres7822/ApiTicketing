@@ -22,13 +22,15 @@ class TipoDeTicketUpdateService{
      * @throws OptimisticLockException
      * @throws ORMException
      */
-    public function update(int $id, string $TipoDeTickett): TipoDeTicket{
+    public function update(int $id, string $TipoTicket, int $DiasLimiteResolucion): TipoDeTicket{
         $TipoDeTicket = $this->repository->findById($id);
-        $TipoDeTicket->setTipoDeTicket($TipoDeTickett);
+        $TipoDeTicket->setTipoTicket($TipoTicket);
+        $TipoDeTicket->setDiasLimiteResolucion($DiasLimiteResolucion);
         $this->repository->save($TipoDeTicket);
 
         $data = [
-            'TipoDeTicket' => $TipoDeTicket->getTipoDeTicket()
+            'TipoTicket' => $TipoDeTicket->getTipoTicket(),
+            'DiasLimiteResolucion' => $TipoDeTicket->getDiasLimiteResolucion()
         ];
         $this->accesoService->create('TipoDeTicket', $id, 5, $data);
 

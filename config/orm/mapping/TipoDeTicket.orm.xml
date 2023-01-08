@@ -4,6 +4,7 @@
         <id name="id">
             <generator strategy="IDENTITY"/>
         </id>
-        <field name="TipoDeTicket" length="32" column="`TipoDeTicket`"/>
+        <field name="TipoTicket" length="64" column="`TipoTicket`"/>
+        <field name="DiasLimiteResolucion" type="integer" column="`DiasLimiteResolucion`"/>
     </entity>
 </doctrine-mapping>

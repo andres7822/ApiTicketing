@@ -15,6 +15,6 @@
         <field name="Observaciones" nullable="true" column="`Observaciones`"/>
         <field name="Status" type="integer" column="`Status`"/>
         <field name="Tipo" type="integer" column="`Tipo`"/>
-        <field name="Involucrados" type="integer" column="`Involucrados`"/>
+        <field name="Involucrados" type="integer" column="`Involucrados" nullable="true"/>
     </entity>
 </doctrine-mapping>

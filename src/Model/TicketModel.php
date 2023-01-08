@@ -65,15 +65,15 @@ class TicketModel
                 ],
                 [
                     'type' => 1,
-                    'name' => 'Sucursal',
-                    'alias' => '',
+                    'name' => '(select s.nombre from Sucursal s where s.id = Sucursal)',
+                    'alias' => 'Sucursal',
                     'extra' => '',
                     'render' => ''
                 ],
                 [
                     'type' => 1,
-                    'name' => 'Area',
-                    'alias' => '',
+                    'name' => '(select a.nombre from Area a where a.id = Area)',
+                    'alias' => 'Area',
                     'extra' => '',
                     'render' => ''
                 ],
@@ -100,24 +100,24 @@ class TicketModel
                 ],
                 [
                     'type' => 1,
-                    'name' => '(select TipoDeTicket from TipoDeTicket tdt where tdt.id = Tipo)',
+                    'name' => '(select TipoTicket from TipoDeTicket tdt where tdt.id = Tipo)',
                     'alias' => 'Tipo',
                     'extra' => '',
                     'render' => ''
                 ],
                 [
-                    'type' => 1,
-                    'name' => '(select su.user from systemUser su where su.id = Involucrados)',
-                    'alias' => 'Involucrado',
-                    'extra' => '',
+                    'type' => 2,
+                    'name' => '',
+                    'alias' => '',
+                    'extra' => 'involucradosTicket',
                     'render' => ''
                 ],
                 [
                     'type' => 2,
-                    'name'=>'',
-                    'alias'=>'',
-                    'extra'=>'seguimientoTicket',
-                    'render'=>''
+                    'name' => '',
+                    'alias' => '',
+                    'extra' => 'seguimientoTicket',
+                    'render' => ''
                 ]
             ],
             'condition' => '',
@@ -138,6 +138,14 @@ class TicketModel
             $fields = 'id, Folio';
         }
 
-        return "select $fields from Ticket order by Folio";
+        return "select $fields from Ticket order by id";
+    }
+
+    public function lastIncrement(): string
+    {
+        return "SELECT `AUTO_INCREMENT`
+                FROM  INFORMATION_SCHEMA.TABLES
+                WHERE TABLE_SCHEMA = 'apiticketing_db'
+                AND   TABLE_NAME   = 'Ticket';";
     }
 }

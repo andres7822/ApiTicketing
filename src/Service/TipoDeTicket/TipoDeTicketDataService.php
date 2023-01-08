@@ -25,7 +25,8 @@ class TipoDeTicketDataService{
     public function data(int $id): TipoDeTicket{
         $TipoDeTicket = $this->repository->findById($id);
         $data = [
-            'TipoDeTicket' => $TipoDeTicket->getTipoDeTicket()
+            'TipoTicket' => $TipoDeTicket->getTipoTicket(),
+            'DiasLimiteResolucion' => $TipoDeTicket->getDiasLimiteResolucion(),
         ];
 
         $this->accesoService->create('TipoDeTicket', $id, 4, $data);

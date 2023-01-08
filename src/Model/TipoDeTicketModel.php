@@ -28,12 +28,18 @@ class TipoDeTicketModel{
                 ],
                 [
                     'type'   => 1,
-                    'name'   => 'TipoDeTicket',
+                    'name'   => 'TipoTicket',
                     'alias'  => '',
                     'extra'  => '',
                     'render' => ''
                 ],
-
+                [
+                    'type'   => 1,
+                    'name'   => 'DiasLimiteResolucion',
+                    'alias'  => '',
+                    'extra'  => '',
+                    'render' => ''
+                ],
             ],
             'condition' => '',
             'group'     => '',
@@ -47,11 +53,11 @@ class TipoDeTicketModel{
 
     public function combo($inText = false): string{
         if($inText){
-            $fields = 'TipoDeTicket, TipoDeTicket';
+            $fields = 'TipoTicket, TipoTicket';
         }else{
-            $fields = 'id, TipoDeTicket';
+            $fields = 'id, TipoTicket';
         }
 
-        return "select $fields from TipoDeTicket order by TipoDeTicket";
+        return "select $fields from TipoDeTicket order by TipoTicket";
     }
 }

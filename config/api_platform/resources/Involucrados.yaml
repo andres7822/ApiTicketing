@@ -112,6 +112,29 @@ App\Entity\Involucrados:
                           - type: string
                       1:
                         type: string
+    getInvolucradosTicket:
+      method: GET
+      path: /Involucrados/getInvolucradosTicket/{inText?false}
+      controller: App\Api\Action\Involucrados\GetInvolucradosTicket
+      deserialize: false
+      openapi_context:
+        summary: Obtiene todos los involucrados de un ticket
+        responses:
+          200:
+            description: OK
+            content:
+              application/json:
+                schema:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      0:
+                        oneOf:
+                          - type: integer
+                          - type: string
+                      1:
+                        type: string
   itemOperations:
     get:
       method: GET

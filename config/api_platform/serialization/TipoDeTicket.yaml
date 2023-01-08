@@ -1,4 +1,6 @@
 App\Entity\TipoDeTicket:
   attributes:
-    TipoDeTicket:
+    TipoTicket:
+      groups: [ TipoDeTicket_read, TipoDeTicket_create, TipoDeTicket_update ]
+    DiasLimiteResolucion:
       groups: [ TipoDeTicket_read, TipoDeTicket_create, TipoDeTicket_update ]

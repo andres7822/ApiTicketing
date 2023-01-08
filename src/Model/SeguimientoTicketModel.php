@@ -43,8 +43,8 @@
                     ],
                     [
                         'type'   => 1,
-                        'name'   => 'Usuario',
-                        'alias'  => '',
+                        'name'   => '(select su.user from systemUser su where su.id = Usuario )',
+                        'alias'  => 'Usuario',
                         'extra'  => '',
                         'render' => ''
                     ],

@@ -22,13 +22,14 @@ class TipoDeTicketRegisterService{
      * @throws OptimisticLockException
      * @throws ORMException
      */
-    public function create(string $TipoDeTicket): TipoDeTicket{
-        $TipoDeTicket = new TipoDeTicket($TipoDeTicket);
+    public function create(string $TipoTicket, int $DiasLimiteResolucion): TipoDeTicket{
+        $TipoDeTicket = new TipoDeTicket($TipoTicket, $DiasLimiteResolucion);
 
         $this->repository->save($TipoDeTicket);
 
         $data = [
-            'TipoDeTicket' => $TipoDeTicket->getTipoDeTicket()
+            'TipoTicket' => $TipoDeTicket->getTipoTicket(),
+            'DiasLimiteResolucion' => $TipoDeTicket->getDiasLimiteResolucion()
         ];
         $this->accesoService->create('TipoDeTicket', $TipoDeTicket->getId(), 2, $data);
 

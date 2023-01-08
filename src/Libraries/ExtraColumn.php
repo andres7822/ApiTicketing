@@ -126,9 +126,17 @@ class ExtraColumn
             case 'seguimientoTicket':
                 $column = '<div align="center">' .
                     '<a class="btn btn-success btn-sm SeguimientoTicket" data-id="' . $index . '" title="Seguimiento Ticket" >' .
-                    '<i class="fa fa-clone"></i>' .
+                    '<i class="fa fa-crosshairs"></i>' .
                     '</a>' .
                     '</div>';
+                break;
+            case 'involucradosTicket':
+                $column = '<div align="center">' .
+                    '<a class="btn btn-primary btn-sm InvolucradosTicket" data-id="' . $index . '" title="Involucrados Ticket" >' .
+                    '<i class="fa fa-users"></i>' .
+                    '</a>' .
+                    '</div>';
+
                 break;
             default:
                 break;

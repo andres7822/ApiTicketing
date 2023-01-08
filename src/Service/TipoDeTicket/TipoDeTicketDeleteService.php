@@ -25,7 +25,8 @@ class TipoDeTicketDeleteService{
     public function delete(int $id): TipoDeTicket{
         $TipoDeTicket = $this->repository->findById($id);
         $data = [
-            'TipoDeTicket' => $TipoDeTicket->getTipoDeTicket()
+            'TipoTicket' => $TipoDeTicket->getTipoTicket(),
+            'DiasLimiteResolucion' => $TipoDeTicket->getDiasLimiteResolucion(),
         ];
 
         $this->repository->removeEntity($TipoDeTicket);
