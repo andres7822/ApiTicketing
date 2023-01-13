@@ -56,7 +56,7 @@
                     ],
                     
                 ],
-                'condition' => '',
+                'condition' => $condition,
                 'group'     => '',
                 'order'     => ' id ASC ',
                 'renderRow' => '',
@@ -68,16 +68,11 @@
 
         public function combo($inText = false): string{
             if($inText){
-                $fields = 'Ticket, Participante';
                 return "Select * from Involucrados where Ticket = $inText";
             }else{
                 $fields = 'id, NivelDeParticipacion';
             }
 
             return "select $fields from Involucrados order by NivelDeParticipacion";
-        }
-
-        public function getDatos():string{
-
         }
     }

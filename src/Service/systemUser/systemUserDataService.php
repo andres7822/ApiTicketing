@@ -38,7 +38,8 @@
                 'idSystemRole' => $systemUser->getidSystemRole(),
                 'tries' => $systemUser->gettries(),
                 'position' => $systemUser->getposition(),
-                'skype' => $systemUser->getskype()
+                'skype' => $systemUser->getskype(),
+                'empleado' => $systemUser->getempleado()
             ];
 
             $this->accesoService->create('systemUser', $id, 4, $data);

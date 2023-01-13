@@ -28,3 +28,5 @@ App\Entity\systemUser:
       groups: [ systemUser_read, systemUser_create, systemUser_update ]
     skype:
       groups: [ systemUser_read, systemUser_create, systemUser_update ]
+    empleado:
+      groups: [ systemUser_read, systemUser_create, systemUser_update ]

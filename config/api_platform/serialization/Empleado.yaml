@@ -4,3 +4,7 @@ App\Entity\Empleado:
       groups: [ Empleado_read, Empleado_create, Empleado_update ]
     Persona:
       groups: [ Empleado_read, Empleado_create, Empleado_update ]
+    Area:
+      groups: [ Empleado_read, Empleado_create, Empleado_update ]
+    Sucursal:
+      groups: [ Empleado_read, Empleado_create, Empleado_update ]

@@ -1,0 +1,8 @@
+App\Entity\Notificaci_on:
+  attributes:
+    Usuario:
+      groups: [ Notificaci_on_read, Notificaci_on_create, Notificaci_on_update ]
+    Notificado:
+      groups: [ Notificaci_on_read, Notificaci_on_create, Notificaci_on_update ]
+    Mensaje:
+      groups: [ Notificaci_on_read, Notificaci_on_create, Notificaci_on_update ]

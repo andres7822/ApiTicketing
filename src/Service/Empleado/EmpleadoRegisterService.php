@@ -22,14 +22,16 @@
          * @throws OptimisticLockException
          * @throws ORMException
          */
-        public function create(string $Clave, int $Persona): Empleado{
-            $Empleado = new Empleado($Clave, $Persona);
+        public function create(string $Clave, int $Persona, ?int $Area, ?int $Sucursal): Empleado{
+            $Empleado = new Empleado($Clave, $Persona, $Area, $Sucursal);
 
             $this->repository->save($Empleado);
 
             $data = [
                 'Clave' => $Empleado->getClave(),
-                'Persona' => $Empleado->getPersona()
+                'Persona' => $Empleado->getPersona(),
+                'Area' => $Empleado->getArea(),
+                'Sucursal' => $Empleado->getSucursal()
             ];
             $this->accesoService->create('Empleado', $Empleado->getId(), 2, $data);
 

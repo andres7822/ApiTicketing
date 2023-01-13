@@ -19,7 +19,7 @@ class TicketRegisterService
 
     public function __construct(TicketRepository         $repository,
                                 systemLogRegisterService $accesoService,
-                                TokenStorageInterface $tokenStorage)
+                                TokenStorageInterface    $tokenStorage)
     {
         $this->repository = $repository;
         $this->accesoService = $accesoService;

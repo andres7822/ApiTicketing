@@ -26,7 +26,9 @@
             $Empleado = $this->repository->findById($id);
             $data = [
                 'Clave' => $Empleado->getClave(),
-                'Persona' => $Empleado->getPersona()
+                'Persona' => $Empleado->getPersona(),
+                'Area' => $Empleado->getArea(),
+                'Sucursal' => $Empleado->getSucursal()
             ];
 
             $this->accesoService->create('Empleado', $id, 4, $data);

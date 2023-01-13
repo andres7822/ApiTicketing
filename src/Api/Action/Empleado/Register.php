@@ -23,7 +23,9 @@
         public function __invoke(Request $request): Empleado{
             $Clave = RequestService::getField($request, 'Clave');
             $Persona = RequestService::getField($request, 'Persona');
+            $Area = RequestService::getField($request, 'Area', false);
+            $Sucursal = RequestService::getField($request, 'Sucursal', false);
 
-            return $this->service->create($Clave, $Persona);
+            return $this->service->create($Clave, $Persona, $Area, $Sucursal);
         }
     }

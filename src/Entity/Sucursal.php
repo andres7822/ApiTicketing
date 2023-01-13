@@ -1,30 +1,29 @@
 <?php
 
-namespace App\Entity;
+    namespace App\Entity;
 
-class Sucursal{
-    private string $id;
-    private string $Nombre;
+    class Sucursal{
+        private int $id;
+        private string $Nombre;
 
-    public function __construct(string $Nombre){
-        $this->Nombre = $Nombre;
+        public function __construct(string $Nombre){
+            $this->Nombre = $Nombre;
+        }
+        
+        public function setId(int $id): void{
+            $this->id = $id;
+        }
+        
+        public function getId(): int{
+            return $this->id;
+        }
+        
+        public function setNombre(string $Nombre): void{
+            $this->Nombre = $Nombre;
+        }
+        
+        public function getNombre(): string{
+            return $this->Nombre;
+        }
+        
     }
-
-    public function setId(string $id): void{
-        $this->id = $id;
-    }
-
-    public function getId(): string{
-        return $this->id;
-    }
-
-    public function setNombre(string $Nombre): void{
-        $this->Nombre = $Nombre;
-    }
-
-    public function getNombre(): string{
-        return $this->Nombre;
-    }
-
-
-}

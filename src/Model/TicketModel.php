@@ -105,13 +105,13 @@ class TicketModel
                     'extra' => '',
                     'render' => ''
                 ],
-                [
+                /*[
                     'type' => 2,
                     'name' => '',
                     'alias' => '',
                     'extra' => 'involucradosTicket',
                     'render' => ''
-                ],
+                ],*/
                 [
                     'type' => 2,
                     'name' => '',
@@ -120,8 +120,8 @@ class TicketModel
                     'render' => ''
                 ]
             ],
-            'condition' => '',
-            'group' => '',
+            'condition' => $condition,
+            'group' => 'Folio',
             'order' => ' id ASC ',
             'renderRow' => '',
             'debug' => 0

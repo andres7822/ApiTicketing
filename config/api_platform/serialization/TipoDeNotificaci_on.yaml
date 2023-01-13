@@ -1,0 +1,4 @@
+App\Entity\TipoDeNotificaci_on:
+  attributes:
+    Nombre:
+      groups: [ TipoDeNotificaci_on_read, TipoDeNotificaci_on_create, TipoDeNotificaci_on_update ]

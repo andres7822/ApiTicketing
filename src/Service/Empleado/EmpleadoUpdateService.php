@@ -22,15 +22,19 @@
          * @throws OptimisticLockException
          * @throws ORMException
          */
-        public function update(int $id, string $Clave, int $Persona): Empleado{
+        public function update(int $id, string $Clave, int $Persona, ?int $Area, ?int $Sucursal): Empleado{
             $Empleado = $this->repository->findById($id);
             $Empleado->setClave($Clave);
             $Empleado->setPersona($Persona);
+            $Empleado->setArea($Area);
+            $Empleado->setSucursal($Sucursal);
             $this->repository->save($Empleado);
 
             $data = [
                 'Clave' => $Empleado->getClave(),
-                'Persona' => $Empleado->getPersona()
+                'Persona' => $Empleado->getPersona(),
+                'Area' => $Empleado->getArea(),
+                'Sucursal' => $Empleado->getSucursal()
             ];
             $this->accesoService->create('Empleado', $id, 5, $data);
 

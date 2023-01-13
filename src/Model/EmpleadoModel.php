@@ -40,6 +40,20 @@
                         'extra'  => '',
                         'render' => ''
                     ],
+                    [
+                        'type'   => 1,
+                        'name'   => '(select a.Nombre from Area a where a.id = Area)',
+                        'alias'  => 'Area',
+                        'extra'  => '',
+                        'render' => ''
+                    ],
+                    [
+                        'type'   => 1,
+                        'name'   => '(select s.Nombre from Sucursal s where s.id = Sucursal)',
+                        'alias'  => 'Sucursal',
+                        'extra'  => '',
+                        'render' => ''
+                    ],
                     
                 ],
                 'condition' => '',

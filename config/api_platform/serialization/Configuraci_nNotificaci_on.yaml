@@ -1,0 +1,6 @@
+App\Entity\Configuraci_nNotificaci_on:
+  attributes:
+    Usuario:
+      groups: [ Configuraci_nNotificaci_on_read, Configuraci_nNotificaci_on_create, Configuraci_nNotificaci_on_update ]
+    TipoDeNotificaci_on:
+      groups: [ Configuraci_nNotificaci_on_read, Configuraci_nNotificaci_on_create, Configuraci_nNotificaci_on_update ]

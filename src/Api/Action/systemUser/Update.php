@@ -35,7 +35,8 @@
             $tries = RequestService::getField($request, 'tries', false);
             $position = RequestService::getField($request, 'position', false);
             $skype = RequestService::getField($request, 'skype', false);
+            $empleado = RequestService::getField($request, 'empleado', false);
 
-            return $this->service->update($id, $user, $password, $email, $selfie, $tag, $fullName, $address, $phone, $area, $idSystemUserStatus, $idSystemRole, $tries, $position, $skype);
+            return $this->service->update($id, $user, $password, $email, $selfie, $tag, $fullName, $address, $phone, $area, $idSystemUserStatus, $idSystemRole, $tries, $position, $skype, $empleado);
         }
     }

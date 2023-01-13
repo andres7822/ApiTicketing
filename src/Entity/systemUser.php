@@ -23,8 +23,9 @@
         private ?int $tries;
         private ?string $position;
         private ?string $skype;
+        private ?int $empleado;
 
-        public function __construct(?string $user, ?string $password, ?string $email, ?string $selfie, ?string $tag, ?string $fullName, ?string $address, ?string $phone, ?int $area, ?int $idSystemUserStatus, ?int $idSystemRole, ?int $tries, ?string $position, ?string $skype){
+        public function __construct(?string $user, ?string $password, ?string $email, ?string $selfie, ?string $tag, ?string $fullName, ?string $address, ?string $phone, ?int $area, ?int $idSystemUserStatus, ?int $idSystemRole, ?int $tries, ?string $position, ?string $skype, ?int $empleado){
             $this->user = $user;
             $this->password = $password;
             $this->email = $email;
@@ -39,6 +40,7 @@
             $this->tries = $tries;
             $this->position = $position;
             $this->skype = $skype;
+            $this->empleado = $empleado;
         }
         
         public function setId(int $id): void{
@@ -159,6 +161,14 @@
         
         public function getSkype(): ?string{
             return $this->skype;
+        }
+
+        public function setEmpleado(int $empleado): void{
+            $this->empleado = $empleado;
+        }
+
+        public function getEmpleado(): ?int{
+            return $this->empleado;
         }
     
         public function getRoles(): array{

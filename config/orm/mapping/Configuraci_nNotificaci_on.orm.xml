@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping">
+    <entity name="App\Entity\Configuraci_nNotificaci_on" table="Configuraci_nNotificaci_on">
+        <id name="id">
+            <generator strategy="IDENTITY"/>
+        </id>
+        <field name="Usuario" type="integer" column="`Usuario`" nullable="true"/>
+        <field name="TipoDeNotificaci_on" type="integer" column="`TipoDeNotificaci_on`"/>
+    </entity>
+</doctrine-mapping>

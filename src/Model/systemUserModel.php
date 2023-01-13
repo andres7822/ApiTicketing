@@ -124,6 +124,13 @@
                         'extra'  => '',
                         'render' => ''
                     ],
+                    [
+                        'type'   => 1,
+                        'name'   => 'empleado',
+                        'alias'  => '',
+                        'extra'  => '',
+                        'render' => ''
+                    ],
                     
                 ],
                 'condition' => '',

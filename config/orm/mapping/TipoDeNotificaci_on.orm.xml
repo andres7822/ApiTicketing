@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping">
+    <entity name="App\Entity\TipoDeNotificaci_on" table="TipoDeNotificaci_on">
+        <id name="id">
+            <generator strategy="IDENTITY"/>
+        </id>
+        <field name="Nombre" length="64" column="`Nombre`"/>
+    </entity>
+</doctrine-mapping>

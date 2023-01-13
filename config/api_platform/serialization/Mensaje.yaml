@@ -1,0 +1,4 @@
+App\Entity\Mensaje:
+  attributes:
+    Mensaje:
+      groups: [ Mensaje_read, Mensaje_create, Mensaje_update ]

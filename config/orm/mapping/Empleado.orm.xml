@@ -6,5 +6,7 @@
         </id>
         <field name="Clave" length="16" column="`Clave`"/>
         <field name="Persona" type="integer" column="`Persona`"/>
+        <field name="Area" type="integer" column="`Area`" nullable="true"/>
+        <field name="Sucursal" type="integer" column="`Sucursal`" nullable="true"/>
     </entity>
 </doctrine-mapping>
